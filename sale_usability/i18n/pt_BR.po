@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-13 19:55+0000\n"
-"PO-Revision-Date: 2023-10-13 17:28-0300\n"
+"PO-Revision-Date: 2023-10-24 07:22-0300\n"
 "Last-Translator: Adriano <adrianojprado@gmail.com>\n"
 "Language-Team: \n"
 "Language: pt\n"
@@ -37,7 +37,7 @@ msgstr "Todas as Linhas de Serviços"
 #: code:addons/sale_usability/wizards/sale_invoice_discount_all_lines.py:0
 #, python-format
 msgid "Applied a {discount}% discount on {line_type}."
-msgstr ""
+msgstr "Aplicou um desconto de {discount}% em {line_type}."
 
 #. module: sale_usability
 #: model_terms:ir.ui.view,arch_db:sale_usability.sale_invoice_discount_all_lines_form
@@ -77,12 +77,12 @@ msgstr "Contato"
 #. module: sale_usability
 #: model:ir.model.fields,field_description:sale_usability.field_sale_invoice_discount_all_lines__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Criado por"
 
 #. module: sale_usability
 #: model:ir.model.fields,field_description:sale_usability.field_sale_invoice_discount_all_lines__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Criado em"
 
 #. module: sale_usability
 #: model:ir.model.fields,help:sale_usability.field_sale_order__date_order
@@ -206,17 +206,17 @@ msgstr "Lançamento de Diário"
 #. module: sale_usability
 #: model:ir.model.fields,field_description:sale_usability.field_sale_invoice_discount_all_lines____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificação em"
 
 #. module: sale_usability
 #: model:ir.model.fields,field_description:sale_usability.field_sale_invoice_discount_all_lines__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última Atualização por"
 
 #. module: sale_usability
 #: model:ir.model.fields,field_description:sale_usability.field_sale_invoice_discount_all_lines__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última Atualização em"
 
 #. module: sale_usability
 #: model:ir.model.fields,field_description:sale_usability.field_res_company__static_sale_terms
