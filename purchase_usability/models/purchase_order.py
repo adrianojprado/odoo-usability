@@ -79,15 +79,22 @@ class PurchaseOrderLine(models.Model):
         compute='_compute_product_supplier_code', string='Vendor Product Code')
 
     def _compute_product_supplier_code(self):
+        pso = self.env['product.supplierinfo']
         for line in self:
             code = False
             if not line.display_type and line.product_id and line.order_id:
                 partner_id = line.order_id.partner_id.commercial_partner_id.id
                 if partner_id:
-                    for supplier_info in line.product_id.seller_ids:
-                        if supplier_info.partner_id.id == partner_id:
-                            code = supplier_info.product_code
-                            break
+                    sinfo = pso.search_read([
+                        ('product_tmpl_id', '=', line.product_id.product_tmpl_id.id),
+                        ('product_id', 'in', (False, line.product_id.id)),
+                        ('partner_id', '=', partner_id),
+                        ('product_code', '!=', False),
+                        ('company_id', 'in', (False, line.order_id.company_id.id)),
+                        ], ['product_code'], limit=1, order='product_id')
+                    # if I order by product_id, I get the null values at the end
+                    if sinfo:
+                        code = sinfo[0]['product_code']
             line.product_supplier_code = code
 
     def _get_product_purchase_description(self, product_lang):
